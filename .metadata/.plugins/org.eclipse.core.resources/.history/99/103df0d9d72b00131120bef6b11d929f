@@ -1,0 +1,160 @@
+package com.example.soundboard;
+
+import android.app.Activity;
+import android.media.MediaPlayer;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+public class soundboardbutt extends Activity {
+
+	MediaPlayer sound1, sound2, sound3, sound4, sound5, sound6, sound7, sound8, sound9, sound10, sound11;
+	
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.soundboardbuttons);
+		
+		//Sound board setup
+		sound1 = MediaPlayer.create(this, R.raw.gunshot);
+		sound2 = MediaPlayer.create(this, R.raw.joker);
+		sound3 = MediaPlayer.create(this, R.raw.sephiroth_monologue);
+		sound4 = MediaPlayer.create(this, R.raw.outofgum);
+		sound5 = MediaPlayer.create(this, R.raw.falconpunch);
+		sound6 = MediaPlayer.create(this, R.raw.mario);
+		sound7 = MediaPlayer.create(this, R.raw.fatality);
+		sound8 = MediaPlayer.create(this, R.raw.sega);
+		sound9 = MediaPlayer.create(this, R.raw.pheonix);
+		sound10 = MediaPlayer.create(this, R.raw.kratos);
+		sound11 = MediaPlayer.create(this, R.raw.skyrim);
+		
+		
+		//First button
+		Button buttonone = (Button) findViewById(R.id.button1);
+		buttonone.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				sound1.start();}});
+
+		//Second button
+		Button buttontwo = (Button) findViewById(R.id.button2);
+		buttontwo.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				sound2.start();}});
+		
+		
+		Button buttonthree = (Button) findViewById(R.id.button3);
+		buttonthree.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				sound3.start();}});
+		
+		Button buttonfour = (Button) findViewById(R.id.button4);
+		buttonfour.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				sound4.start();}});
+		
+		Button buttonfive = (Button) findViewById(R.id.button5);
+		buttonfive.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				sound5.start();}});
+		
+		Button six = (Button) findViewById(R.id.button6);
+		six.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				sound6.start();}});
+		
+		Button seven = (Button) findViewById(R.id.button7);
+		seven.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				sound7.start();}});
+		
+		Button eight = (Button) findViewById(R.id.button8);
+		eight.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				sound8.start();}});
+		
+		Button nine = (Button) findViewById(R.id.button9);
+		nine.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				sound9.start();}});
+		
+		Button ten = (Button) findViewById(R.id.button10);
+		ten.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				sound10.start();}});
+		
+		Button eleven = (Button) findViewById(R.id.button11);
+		eleven.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				sound11.start();}});
+	
+	
+	
+	}
+
+	@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
+		sound1.release();
+		sound2.release();
+		sound3.release();
+		
+	}
+
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+	}
+
+	@Override
+	protected void onRestart() {
+		// TODO Auto-generated method stub
+		super.onRestart();
+	}
+
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+	}
+
+	@Override
+	protected void onStart() {
+		// TODO Auto-generated method stub
+		super.onStart();
+	}
+
+	@Override
+	protected void onStop() {
+		// TODO Auto-generated method stub
+		super.onStop();
+	}
+	
+	
+
+}
